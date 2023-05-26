@@ -5,7 +5,7 @@ vides=3
 
 while  [ $vides -ne 0 ]
 do
-    read -p "introdueix un numero: " introduit
+    read -p "introdueix un numero entre 1 i 10: " introduit
 
     if [[ ${adivina} -eq ${introduit} ]]
     then
