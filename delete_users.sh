@@ -31,7 +31,7 @@ do
 
     if [[ ${?} -ne 0 ]]
     then
-        echo "Errada creant l'usuari"
+        echo "Errada creant usuari"
         exit 1
     fi
 
