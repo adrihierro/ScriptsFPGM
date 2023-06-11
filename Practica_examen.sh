@@ -15,7 +15,7 @@ URL="https://www.random.org/integers/?num=${NumeroGen}&min=1&max=100&col=1&base=
 suma=0
 MINIM=101
 MAXIM=0
-for NUMERO in $(curl ${URL})
+for NUMERO in $(curl -s ${URL})
 do
     echo "el valor del numero és ${NUMERO}"
     suma=$((suma+NUMERO))
@@ -35,4 +35,8 @@ echo "SUMA=${suma}"
 echo "MINIM=${MINIM}"
 echo "MAXIM=${MAXIM}"
 Mitjana=$(echo "scale=2; ${suma}/${NumeroGen}" | bc)
-echo "Mitjana=${Mitjana}"
+
+
+
+MENSAJE="La Mitjana es ${Mitjana}"
+/home/adri/ScriptGitHub/Telegram_bot2.sh "${MENSAJE}"
